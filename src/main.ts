@@ -37,7 +37,7 @@ async function bootstrap() {
   // Global prefix
   app.setGlobalPrefix('api/v1');
 
-  const port = configService.get('PORT'); // Default to 3000, but allow override
+  const port = configService.get('PORT'); // Default to 3009, but allow override
   const host = configService.get('HOST', '0.0.0.0'); // Listen on all interfaces
   const server = await app.listen(port, host);
   const actualPort = server.address()?.port || port;
